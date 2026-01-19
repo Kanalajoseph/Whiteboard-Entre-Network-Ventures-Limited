@@ -1,0 +1,283 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* ===== DESIGN TOKENS ===== */
+@theme {
+  /* Color Palette - Blue/Orange Theme */
+  --color-primary-50: hsl(217, 91%, 95%);
+  --color-primary-100: hsl(217, 91%, 88%);
+  --color-primary-200: hsl(217, 91%, 76%);
+  --color-primary-300: hsl(217, 91%, 64%);
+  --color-primary-400: hsl(217, 91%, 52%);
+  --color-primary-500: hsl(217, 91%, 45%);
+  --color-primary-600: hsl(217, 91%, 38%);
+  --color-primary-700: hsl(217, 91%, 30%);
+  --color-primary-800: hsl(217, 91%, 22%);
+  --color-primary-900: hsl(217, 91%, 14%);
+  
+  --color-accent-50: hsl(27, 100%, 95%);
+  --color-accent-100: hsl(27, 100%, 88%);
+  --color-accent-200: hsl(27, 100%, 76%);
+  --color-accent-300: hsl(27, 100%, 64%);
+  --color-accent-400: hsl(27, 100%, 52%);
+  --color-accent-500: hsl(27, 100%, 50%);
+  --color-accent-600: hsl(27, 100%, 45%);
+  --color-accent-700: hsl(27, 100%, 38%);
+  --color-accent-800: hsl(27, 100%, 30%);
+  --color-accent-900: hsl(27, 100%, 22%);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  @apply antialiased;
+}
+
+body {
+  @apply font-sans text-slate-900 bg-slate-50;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold tracking-tight;
+}
+
+/* ===== CUSTOM UTILITIES ===== */
+
+/* Glassmorphism Effects */
+.glass {
+  @apply bg-white/80 backdrop-blur-lg border border-white/20;
+}
+
+.glass-dark {
+  @apply bg-slate-900/80 backdrop-blur-lg border border-white/10;
+}
+
+.glass-primary {
+  @apply bg-primary-500/10 backdrop-blur-lg border border-primary-500/20;
+}
+
+.glass-accent {
+  @apply bg-accent-500/10 backdrop-blur-lg border border-accent-500/20;
+}
+
+/* Gradient Utilities */
+.gradient-primary {
+  @apply bg-gradient-to-br from-primary-500 to-primary-700;
+}
+
+.gradient-accent {
+  @apply bg-gradient-to-br from-accent-500 to-accent-700;
+}
+
+.gradient-mixed {
+  @apply bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-br from-primary-600 to-accent-600 bg-clip-text text-transparent;
+}
+
+/* Shadow Utilities */
+.shadow-glow-primary {
+  box-shadow: 0 0 30px -5px hsl(217, 91%, 60%);
+}
+
+.shadow-glow-accent {
+  box-shadow: 0 0 30px -5px hsl(27, 100%, 60%);
+}
+
+/* Hover Transform */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.6s ease-out;
+}
+
+.animate-slideLeft {
+  animation: slideLeft 0.6s ease-out;
+}
+
+.animate-slideRight {
+  animation: slideRight 0.6s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Delayed Animations */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* ===== CUSTOM COMPONENTS ===== */
+
+/* Section Spacing */
+.section {
+  @apply py-16 md:py-24;
+}
+
+.section-sm {
+  @apply py-12 md:py-16;
+}
+
+.section-lg {
+  @apply py-24 md:py-32;
+}
+
+/* Container */
+.container-custom {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Focus Visible */
+*:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  @apply bg-accent-500 text-white;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}

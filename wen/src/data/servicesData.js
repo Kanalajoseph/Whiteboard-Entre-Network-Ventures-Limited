@@ -1,0 +1,125 @@
+import {
+    GraduationCap,
+    FileText,
+    Package,
+    Building2,
+    CreditCard,
+} from 'lucide-react';
+
+export const servicesData = [
+    {
+        id: 'education',
+        title: 'Education Services',
+        slug: 'education',
+        icon: GraduationCap,
+        shortDescription: 'Comprehensive research, academic support, and skills development programs for students and institutions.',
+        description: 'We provide comprehensive educational support services including research assistance, academic consultancy, and skills development programs tailored to students, institutions, and organizations.',
+        features: [
+            'Research and academic support services',
+            'Educational support programs',
+            'Skills development and youth empowerment initiatives',
+            'School systems support and education consultancy',
+            'Curriculum development and training',
+            'Educational technology integration',
+        ],
+        benefits: [
+            'Experienced education consultants',
+            'Customized learning solutions',
+            'Proven track record with institutions',
+            'Modern teaching methodologies',
+        ],
+    },
+    {
+        id: 'tax',
+        title: 'Tax Consultancy',
+        slug: 'tax-consultancy',
+        icon: FileText,
+        shortDescription: 'Professional tax planning, compliance, and accounting services for businesses and individuals.',
+        description: 'Expert tax consultancy and compliance services to help businesses navigate complex tax regulations and optimize their tax positions.',
+        features: [
+            'Tax planning and structuring',
+            'Corporate Tax compliance',
+            'VAT, PAYE, and WHT services',
+            'Customs & Excise advisory',
+            'Business registration and licensing',
+            'Payroll and expatriate services',
+            'Accounting, bookkeeping, and auditing',
+        ],
+        benefits: [
+            'Certified tax professionals',
+            'Up-to-date regulatory knowledge',
+            'Personalized tax strategies',
+            'Compliance assurance',
+        ],
+    },
+    {
+        id: 'supply',
+        title: 'General Supply',
+        slug: 'general-supply',
+        icon: Package,
+        shortDescription: 'Quality office supplies, electronics, medical equipment, and agricultural products with timely delivery.',
+        description: 'Reliable supply chain solutions for businesses, institutions, and individuals seeking quality products at competitive prices.',
+        features: [
+            'Office and stationery supplies',
+            'Electronics and industrial materials',
+            'Medical supplies and safety equipment',
+            'Consumer and agricultural products',
+            'Bulk and retail supply options',
+            'Custom procurement solutions',
+        ],
+        benefits: [
+            'Quality assured products',
+            'Competitive pricing',
+            'Timely delivery',
+            'Wide product range',
+        ],
+    },
+    {
+        id: 'construction',
+        title: 'Construction & Real Estate',
+        slug: 'construction-real-estate',
+        icon: Building2,
+        shortDescription: 'Building construction, civil works, infrastructure projects, and property development services.',
+        description: 'Comprehensive construction and real estate services from planning and design to execution and property management.',
+        features: [
+            'Building construction services',
+            'Civil works and infrastructure projects',
+            'Road and railway works',
+            'Real estate development',
+            'Property management services',
+            'Architectural and engineering solutions',
+        ],
+        benefits: [
+            'Experienced construction team',
+            'Quality workmanship',
+            'Project management expertise',
+            'Regulatory compliance',
+        ],
+    },
+    {
+        id: 'loans',
+        title: 'Loans / Car Hire',
+        slug: 'loans-car-hire',
+        icon: CreditCard,
+        shortDescription: 'Collateral-based personal and business loans with flexible repayment options and fast approval.',
+        description: 'Flexible financing solutions and reliable car hire services to meet your personal and business mobility needs.',
+        features: [
+            'Collateral-based personal loans',
+            'Business financing options',
+            'Flexible repayment schedules',
+            'Fast approval process',
+            'Car hire services',
+            'Short and long-term rentals',
+        ],
+        benefits: [
+            'Competitive interest rates',
+            'Quick processing',
+            'Transparent terms',
+            'Professional service',
+        ],
+    },
+];
+
+export const getServiceBySlug = (slug) => {
+    return servicesData.find((service) => service.slug === slug);
+};
