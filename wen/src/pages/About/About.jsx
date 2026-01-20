@@ -32,17 +32,17 @@ export default function About() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 to-slate-50">
+            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                About <span className="gradient-text">WEN</span>
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                                About <span className="text-accent-100">WEN</span>
                             </h1>
-                            <p className="text-2xl font-semibold gradient-text mb-3">
+                            <p className="text-2xl font-semibold text-accent-100 mb-3">
                                 Well rounded individuals and groups!
                             </p>
-                            <p className="text-xl text-slate-600 leading-relaxed">
+                            <p className="text-xl text-white/90 leading-relaxed">
                                 Whiteboard Entre-Network Ventures Limited is a multi-service organization
                                 delivering excellence across education, tax consultancy, general supply,
                                 construction & real estate, and financial services.
@@ -58,15 +58,12 @@ export default function About() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <ScrollReveal direction="left">
                             <div className="relative">
-                                <div className="w-full aspect-video rounded-2xl gradient-mixed flex items-center justify-center shadow-2xl p-8">
-                                    <div className="text-white text-center">
-                                        <img
-                                            src={wenLogo}
-                                            alt="WEN Logo"
-                                            className="h-32 w-auto object-contain mx-auto mb-4"
-                                        />
-                                        <p className="text-lg font-medium">Excellence in Service</p>
-                                    </div>
+                                <div className="w-full aspect-video flex items-center justify-center p-8">
+                                    <img
+                                        src={wenLogo}
+                                        alt="WEN Logo"
+                                        className="h-64 w-auto object-contain mx-auto shadow-2xl rounded-2xl"
+                                    />
                                 </div>
                             </div>
                         </ScrollReveal>

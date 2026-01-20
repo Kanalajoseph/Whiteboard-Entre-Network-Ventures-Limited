@@ -188,14 +188,14 @@ export default function Loans() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 via-slate-50 to-accent-50/30">
+            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                Loan <span className="gradient-text">Application</span>
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                                Loan <span className="text-accent-100">Application</span>
                             </h1>
-                            <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                            <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Apply for a collateral-based loan and get financing for your personal or business needs.
                             </p>
                         </div>
@@ -227,10 +227,10 @@ export default function Loans() {
                                         return (
                                             <div key={step.number} className="flex flex-col items-center">
                                                 <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all ${isCompleted
-                                                        ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white'
-                                                        : isActive
-                                                            ? 'bg-white border-4 border-primary-600 text-primary-600'
-                                                            : 'bg-white border-2 border-slate-300 text-slate-400'
+                                                    ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white'
+                                                    : isActive
+                                                        ? 'bg-white border-4 border-primary-600 text-primary-600'
+                                                        : 'bg-white border-2 border-slate-300 text-slate-400'
                                                     }`}>
                                                     {isCompleted ? (
                                                         <Check className="w-6 h-6" />

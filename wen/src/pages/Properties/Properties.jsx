@@ -46,14 +46,14 @@ export default function Properties() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 via-slate-50 to-accent-50/30">
+            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                Real <span className="gradient-text">Estate</span>
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                                Real <span className="text-accent-100">Estate</span>
                             </h1>
-                            <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                            <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Discover your dream property in Lusaka. From residential homes to commercial spaces, find the perfect match.
                             </p>
 
@@ -66,7 +66,7 @@ export default function Properties() {
                                         placeholder="Search properties..."
                                         value={filters.search}
                                         onChange={(e) => handleFilterChange('search', e.target.value)}
-                                        className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                        className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
                                     />
                                 </div>
                             </div>

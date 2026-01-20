@@ -142,7 +142,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-lg gradient-mixed px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200"
+            className="inline-flex items-center rounded-lg gradient-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-200"
           >
             Request a Quote
           </Link>
@@ -272,7 +272,7 @@ export default function Header() {
               <Link
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 mx-4 py-2.5 rounded-lg gradient-mixed text-white text-center font-medium shadow-lg"
+                className="mt-2 mx-4 py-2.5 rounded-lg gradient-accent text-white text-center font-medium shadow-lg"
               >
                 Request a Quote
               </Link>

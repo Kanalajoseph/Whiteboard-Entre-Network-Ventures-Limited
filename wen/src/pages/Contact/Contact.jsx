@@ -33,14 +33,14 @@ export default function Contact() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 via-slate-50 to-accent-50/30">
+            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                Get In <span className="gradient-text">Touch</span>
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                                Get In <span className="text-accent-100">Touch</span>
                             </h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">
+                            <p className="text-xl text-white/90 leading-relaxed">
                                 Ready to discuss your project? Contact us today for professional service solutions.
                             </p>
                         </div>

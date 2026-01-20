@@ -41,17 +41,17 @@ export default function ServiceDetail() {
             </div>
 
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 via-slate-50 to-accent-50/30">
+            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <div className="w-20 h-20 rounded-2xl gradient-mixed flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-lg flex items-center justify-center mx-auto mb-6 shadow-lg">
                                 <Icon className="w-10 h-10 text-white" />
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
                                 {service.title}
                             </h1>
-                            <p className="text-xl text-slate-600 leading-relaxed">
+                            <p className="text-xl text-white/90 leading-relaxed">
                                 {service.description}
                             </p>
                         </div>
