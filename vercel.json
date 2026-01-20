@@ -1,0 +1,6 @@
+{
+    "buildCommand": "cd wen && npm install && npm run build",
+    "outputDirectory": "wen/dist",
+    "installCommand": "cd wen && npm install",
+    "framework": null
+}
