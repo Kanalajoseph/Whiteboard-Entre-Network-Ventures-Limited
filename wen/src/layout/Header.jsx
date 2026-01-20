@@ -2,18 +2,22 @@ import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import wenLogo from "../images/wen_logo2.jpg";
 
 const linkBase =
   "text-sm font-medium text-slate-700 hover:text-primary-600 transition-colors duration-200";
 const linkActive = "text-primary-600 font-semibold";
 
+
 const services = [
+  { name: 'Corporate Skills', path: '/services/corporate-skills' },
   { name: 'Education Services', path: '/services/education' },
   { name: 'Tax Consultancy', path: '/services/tax-consultancy' },
   { name: 'General Supply', path: '/services/general-supply' },
   { name: 'Construction & Real Estate', path: '/services/construction-real-estate' },
   { name: 'Loans / Car Hire', path: '/services/loans-car-hire' },
 ];
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,12 +28,11 @@ export default function Header() {
       <div className="container-custom py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg gradient-mixed flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-xl">W</span>
-          </div>
-          <span className="font-display font-bold text-xl text-slate-900 hidden sm:inline">
-            WEN
-          </span>
+          <img
+            src={wenLogo}
+            alt="WEN Logo"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -104,6 +107,27 @@ export default function Header() {
             className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
           >
             Clients
+          </NavLink>
+
+          <NavLink
+            to="/cars"
+            className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
+          >
+            Cars
+          </NavLink>
+
+          <NavLink
+            to="/properties"
+            className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
+          >
+            Properties
+          </NavLink>
+
+          <NavLink
+            to="/loans"
+            className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
+          >
+            Loans
           </NavLink>
 
           <NavLink
@@ -203,6 +227,36 @@ export default function Header() {
                 }
               >
                 Clients
+              </NavLink>
+
+              <NavLink
+                to="/cars"
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                }
+              >
+                Cars
+              </NavLink>
+
+              <NavLink
+                to="/properties"
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                }
+              >
+                Properties
+              </NavLink>
+
+              <NavLink
+                to="/loans"
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                }
+              >
+                Loans
               </NavLink>
 
               <NavLink

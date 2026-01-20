@@ -11,19 +11,32 @@ const industries = [
     { name: 'Government Bodies', icon: Building2, color: 'accent' },
 ];
 
+const clients = [
+    { name: 'TOLUMI EXPRESS LIMITED' },
+    { name: 'Kudu Consulting' },
+    { name: 'Vigour Enviro Solutions' },
+    { name: 'SOUTHPARK FUN ZONE' },
+    { name: 'INFLUX LIMITED INVESTMENTS' },
+    { name: 'WORK THE WORLD' },
+    { name: 'International School of Lusaka' },
+    { name: 'Wastemat Zambia' },
+    { name: 'ZAMBIA DAILY MAIL LIMITED' },
+    { name: 'BLOOM BUSINESS ENTERPRISE' },
+];
+
 const testimonials = [
     {
-        name: 'Educational Institution',
+        name: 'International School of Lusaka',
         sector: 'Education',
         quote: 'WEN provided exceptional support for our research and development initiatives.',
     },
     {
-        name: 'Corporate Client',
+        name: 'Kudu Consulting',
         sector: 'Business',
         quote: 'Professional tax consultancy and reliable supply chain solutions.',
     },
     {
-        name: 'Construction Partner',
+        name: 'Vigour Enviro Solutions',
         sector: 'Infrastructure',
         quote: 'Quality construction services delivered on time and within budget.',
     },

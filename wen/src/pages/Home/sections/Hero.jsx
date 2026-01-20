@@ -6,6 +6,7 @@ import Button from '../../../components/ui/Button';
 import ScrollReveal from '../../../components/ScrollReveal';
 
 // Import images
+import corporateSkillsImg from '../../../images/corporate-skills.png';
 import educationImg from '../../../images/education.jpg';
 import taxImg from '../../../images/Tax.jpg';
 import constructionImg from '../../../images/construction.jpg';
@@ -13,7 +14,14 @@ import realEstateImg from '../../../images/real-estatet.png';
 import loanImg from '../../../images/Loan.jpg';
 import carHireImg from '../../../images/car hire.jpg';
 
+
 const carouselSlides = [
+    {
+        image: corporateSkillsImg,
+        title: 'Corporate Skills',
+        subtitle: 'Strategic Planning & Leadership Development',
+        tagline: 'Empowering Organizations for Success',
+    },
     {
         image: educationImg,
         title: 'Education Services',
@@ -52,13 +60,14 @@ const carouselSlides = [
     },
 ];
 
+
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % carouselSlides.length);
-        }, 3000); // Change slide every 3 seconds
+        }, 6000); // Change slide every 6 seconds for more professional pacing
 
         return () => clearInterval(interval);
     }, []);
@@ -72,10 +81,13 @@ export default function Hero() {
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentIndex}
-                        initial={{ opacity: 0, scale: 1.1 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        transition={{ duration: 1, ease: 'easeInOut' }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            duration: 1.2,
+                            ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smooth, professional fade
+                        }}
                         className="absolute inset-0"
                     >
                         <img
@@ -109,10 +121,13 @@ export default function Hero() {
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={currentIndex}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.5 }}
+                            exit={{ opacity: 0, y: -30 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: [0.43, 0.13, 0.23, 0.96]
+                            }}
                         >
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 leading-tight">
                                 {currentSlide.title}
@@ -157,8 +172,8 @@ export default function Hero() {
                                     key={index}
                                     onClick={() => setCurrentIndex(index)}
                                     className={`h-1 rounded-full transition-all duration-300 ${index === currentIndex
-                                            ? 'w-8 bg-accent-500'
-                                            : 'w-4 bg-white/40 hover:bg-white/60'
+                                        ? 'w-8 bg-accent-500'
+                                        : 'w-4 bg-white/40 hover:bg-white/60'
                                         }`}
                                     aria-label={`Go to slide ${index + 1}`}
                                 />

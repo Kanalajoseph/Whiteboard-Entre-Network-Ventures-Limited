@@ -149,14 +149,26 @@ export default function Contact() {
                                         <div className="w-12 h-12 rounded-lg gradient-mixed flex items-center justify-center flex-shrink-0">
                                             <Phone className="w-6 h-6 text-white" />
                                         </div>
-                                        <div>
-                                            <h3 className="font-semibold text-slate-900 mb-1">Phone</h3>
-                                            <a
-                                                href="tel:+260973414769"
-                                                className="text-primary-600 hover:text-primary-700"
-                                            >
-                                                +260 973 414 769
-                                            </a>
+                                        <div className="flex-1">
+                                            <h3 className="font-semibold text-slate-900 mb-2">Phone</h3>
+                                            <div className="space-y-1">
+                                                <div>
+                                                    <a
+                                                        href="tel:+260973414769"
+                                                        className="text-primary-600 hover:text-primary-700 block"
+                                                    >
+                                                        +260 973 414 769
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        href="tel:+260770706706"
+                                                        className="text-primary-600 hover:text-primary-700 block"
+                                                    >
+                                                        +260 770 706 706
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Card>
@@ -166,14 +178,26 @@ export default function Contact() {
                                         <div className="w-12 h-12 rounded-lg gradient-mixed flex items-center justify-center flex-shrink-0">
                                             <Mail className="w-6 h-6 text-white" />
                                         </div>
-                                        <div>
-                                            <h3 className="font-semibold text-slate-900 mb-1">Email</h3>
-                                            <a
-                                                href="mailto:whiteboard289@gmail.com"
-                                                className="text-primary-600 hover:text-primary-700 break-all"
-                                            >
-                                                whiteboard289@gmail.com
-                                            </a>
+                                        <div className="flex-1">
+                                            <h3 className="font-semibold text-slate-900 mb-2">Email</h3>
+                                            <div className="space-y-1">
+                                                <div>
+                                                    <a
+                                                        href="mailto:whiteboardzambia@gmail.com"
+                                                        className="text-primary-600 hover:text-primary-700 break-all block"
+                                                    >
+                                                        whiteboardzambia@gmail.com
+                                                    </a>
+                                                </div>
+                                                <div>
+                                                    <a
+                                                        href="mailto:wenventuresltd@gmail.com"
+                                                        className="text-primary-600 hover:text-primary-700 break-all block"
+                                                    >
+                                                        wenventuresltd@gmail.com
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </Card>
@@ -185,7 +209,11 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <h3 className="font-semibold text-slate-900 mb-1">Location</h3>
-                                            <p className="text-slate-600">Lusaka, Zambia</p>
+                                            <p className="text-slate-600">
+                                                Plot No. 25, 1st Floor, Room 104<br />
+                                                Design House, Cairo Road<br />
+                                                Lusaka, Zambia
+                                            </p>
                                         </div>
                                     </div>
                                 </Card>
