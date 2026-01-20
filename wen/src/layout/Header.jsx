@@ -22,17 +22,38 @@ const services = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [logoClicks, setLogoClicks] = useState(0);
+  const [lastClickTime, setLastClickTime] = useState(0);
+
+  const handleLogoClick = () => {
+    const now = Date.now();
+    if (now - lastClickTime > 2000) {
+      setLogoClicks(1);
+    } else {
+      setLogoClicks(prev => prev + 1);
+    }
+    setLastClickTime(now);
+
+    if (logoClicks >= 4) {
+      window.location.href = '/admin/login';
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 glass shadow-sm">
       <div className="container-custom py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-3" onClick={handleLogoClick}>
           <img
             src={wenLogo}
             alt="WEN Logo"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain cursor-pointer"
           />
+          <div className="hidden md:block">
+            <span className="text-sm font-bold text-slate-900 leading-tight">
+              Whiteboard Entre-Network<br />Ventures Limited
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -172,7 +193,7 @@ export default function Header() {
             transition={{ duration: 0.2 }}
             className="lg:hidden border-t border-slate-200 glass-primary overflow-hidden"
           >
-            <nav className="container-custom py-4 flex flex-col gap-2">
+            <nav className="container-custom py-4 flex flex-col gap-2 max-h-[70vh] overflow-y-auto">
               <NavLink
                 to="/"
                 end

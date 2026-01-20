@@ -46,7 +46,7 @@ export default function Properties() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500">
+            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
