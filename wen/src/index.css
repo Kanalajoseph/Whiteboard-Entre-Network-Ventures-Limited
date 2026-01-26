@@ -14,6 +14,7 @@
   --color-primary-700: hsl(217, 91%, 30%);
   --color-primary-800: hsl(217, 91%, 22%);
   --color-primary-900: hsl(217, 91%, 14%);
+  --color-primary-950: hsl(217, 91%, 8%);
 
   --color-accent-50: hsl(27, 100%, 95%);
   --color-accent-100: hsl(27, 100%, 88%);
@@ -25,6 +26,7 @@
   --color-accent-700: hsl(27, 100%, 38%);
   --color-accent-800: hsl(27, 100%, 30%);
   --color-accent-900: hsl(27, 100%, 22%);
+  --color-accent-950: hsl(27, 100%, 12%);
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
