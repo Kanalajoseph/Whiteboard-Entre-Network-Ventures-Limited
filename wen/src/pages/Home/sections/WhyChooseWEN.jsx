@@ -27,14 +27,14 @@ const features = [
 
 export default function WhyChooseWEN() {
     return (
-        <section className="section bg-gradient-to-br from-slate-50 to-primary-50/30">
+        <section className="section bg-transparent">
             <div className="container-custom">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
                             Why Choose <span className="gradient-text">WEN</span>
                         </h2>
-                        <p className="text-lg text-slate-600">
+                        <p className="text-lg text-slate-300">
                             We combine expertise, dedication, and innovation to deliver exceptional value to our clients.
                         </p>
                     </div>
@@ -45,14 +45,14 @@ export default function WhyChooseWEN() {
                         const Icon = feature.icon;
                         return (
                             <ScrollReveal key={feature.title} delay={index * 0.1} direction="up">
-                                <Card variant="glass" hover={true} className="text-center h-full">
-                                    <div className="w-16 h-16 rounded-xl gradient-mixed flex items-center justify-center mx-auto mb-4">
+                                <Card variant="glassDark" hover={true} className="text-center h-full">
+                                    <div className="w-16 h-16 rounded-xl bg-accent-600 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-accent-600/20">
                                         <Icon className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                                    <h3 className="text-xl font-bold text-white mb-2">
                                         {feature.title}
                                     </h3>
-                                    <p className="text-slate-600">
+                                    <p className="text-slate-300">
                                         {feature.description}
                                     </p>
                                 </Card>

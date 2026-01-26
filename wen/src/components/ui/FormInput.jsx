@@ -10,20 +10,20 @@ export default function FormInput({
     return (
         <div className={className}>
             {label && (
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label className="block text-sm font-medium text-slate-300 mb-2">
                     {label}
-                    {required && <span className="text-accent-500 ml-1">*</span>}
+                    {required && <span className="text-accent-400 ml-1">*</span>}
                 </label>
             )}
 
             <input
                 className={clsx(
                     'w-full px-4 py-2.5 rounded-lg border transition-all duration-200',
-                    'focus:outline-none focus:ring-2 focus:ring-offset-1',
-                    'placeholder:text-slate-400',
+                    'focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-slate-900',
+                    'placeholder:text-slate-500 bg-slate-800',
                     error
-                        ? 'border-red-300 focus:border-red-500 focus:ring-red-500'
-                        : 'border-slate-300 focus:border-primary-500 focus:ring-primary-500 hover:border-slate-400'
+                        ? 'border-red-500/50 text-red-100 focus:border-red-500 focus:ring-red-500'
+                        : 'border-white/10 text-white focus:border-accent-500 focus:ring-accent-500 hover:border-white/20'
                 )}
                 {...props}
             />

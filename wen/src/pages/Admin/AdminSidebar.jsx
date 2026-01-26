@@ -21,7 +21,7 @@ export default function AdminSidebar() {
     };
 
     return (
-        <aside className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-slate-900 text-white">
+        <aside className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-slate-950 border-r border-white/5 text-white">
             <nav className="p-4 space-y-2">
                 {menuItems.map((item) => {
                     const Icon = item.icon;
@@ -31,8 +31,8 @@ export default function AdminSidebar() {
                             to={item.path}
                             className={({ isActive }) =>
                                 `flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${isActive
-                                    ? 'bg-primary-600 text-white'
-                                    : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                                    ? 'bg-accent-600 text-white shadow-lg shadow-accent-600/20'
+                                    : 'text-slate-400 hover:bg-white/5 hover:text-white'
                                 }`
                             }
                         >
@@ -43,7 +43,7 @@ export default function AdminSidebar() {
                 })}
             </nav>
 
-            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-800">
+            <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-white/5">
                 <button
                     onClick={handleLogout}
                     className="flex items-center gap-3 px-4 py-3 rounded-lg w-full text-slate-300 hover:bg-red-500/10 hover:text-red-400 transition-colors"

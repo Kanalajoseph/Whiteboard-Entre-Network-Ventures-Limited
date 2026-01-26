@@ -33,12 +33,12 @@ export default function Contact() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-                                Get In <span className="text-accent-100">Touch</span>
+                                Get In <span className="text-accent-500">Touch</span>
                             </h1>
                             <p className="text-xl text-white/90 leading-relaxed">
                                 Ready to discuss your project? Contact us today for professional service solutions.
@@ -49,13 +49,13 @@ export default function Contact() {
             </section>
 
             {/* Contact Form & Info */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
                         {/* Contact Form */}
                         <ScrollReveal direction="left">
-                            <Card variant="glass">
-                                <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">
+                            <Card variant="glassDark" className="border border-white/5">
+                                <h2 className="text-3xl font-display font-bold text-white mb-6">
                                     Send Us a Message
                                 </h2>
                                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -91,11 +91,11 @@ export default function Contact() {
                                     />
 
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Service Interest
                                         </label>
                                         <select
-                                            className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                            className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
                                             {...register('service')}
                                         >
                                             <option value="">Select a service</option>
@@ -136,26 +136,26 @@ export default function Contact() {
                         <ScrollReveal direction="right">
                             <div className="space-y-6">
                                 <div>
-                                    <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">
+                                    <h2 className="text-3xl font-display font-bold text-white mb-6">
                                         Contact Information
                                     </h2>
-                                    <p className="text-slate-600 mb-8">
+                                    <p className="text-slate-400 mb-8">
                                         Reach out to us through any of the following channels. We're here to help!
                                     </p>
                                 </div>
 
-                                <Card variant="glass" hover={true}>
+                                <Card variant="glassDark" hover={true} className="border border-white/5">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-lg gradient-mixed flex items-center justify-center flex-shrink-0">
+                                        <div className="w-12 h-12 rounded-lg bg-accent-600 flex items-center justify-center flex-shrink-0">
                                             <Phone className="w-6 h-6 text-white" />
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="font-semibold text-slate-900 mb-2">Phone</h3>
+                                            <h3 className="font-semibold text-white mb-2">Phone</h3>
                                             <div className="space-y-1">
                                                 <div>
                                                     <a
                                                         href="tel:+260973414769"
-                                                        className="text-primary-600 hover:text-primary-700 block"
+                                                        className="text-accent-400 hover:text-accent-300 block"
                                                     >
                                                         +260 973 414 769
                                                     </a>
@@ -163,7 +163,7 @@ export default function Contact() {
                                                 <div>
                                                     <a
                                                         href="tel:+260770706706"
-                                                        className="text-primary-600 hover:text-primary-700 block"
+                                                        className="text-accent-400 hover:text-accent-300 block"
                                                     >
                                                         +260 770 706 706
                                                     </a>
@@ -173,18 +173,18 @@ export default function Contact() {
                                     </div>
                                 </Card>
 
-                                <Card variant="glass" hover={true}>
+                                <Card variant="glassDark" hover={true} className="border border-white/5">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-lg gradient-mixed flex items-center justify-center flex-shrink-0">
+                                        <div className="w-12 h-12 rounded-lg bg-accent-600 flex items-center justify-center flex-shrink-0">
                                             <Mail className="w-6 h-6 text-white" />
                                         </div>
                                         <div className="flex-1">
-                                            <h3 className="font-semibold text-slate-900 mb-2">Email</h3>
+                                            <h3 className="font-semibold text-white mb-2">Email</h3>
                                             <div className="space-y-1">
                                                 <div>
                                                     <a
                                                         href="mailto:whiteboardzambia@gmail.com"
-                                                        className="text-primary-600 hover:text-primary-700 break-all block"
+                                                        className="text-accent-400 hover:text-accent-300 break-all block"
                                                     >
                                                         whiteboardzambia@gmail.com
                                                     </a>
@@ -192,7 +192,7 @@ export default function Contact() {
                                                 <div>
                                                     <a
                                                         href="mailto:wenventuresltd@gmail.com"
-                                                        className="text-primary-600 hover:text-primary-700 break-all block"
+                                                        className="text-accent-400 hover:text-accent-300 break-all block"
                                                     >
                                                         wenventuresltd@gmail.com
                                                     </a>
@@ -202,14 +202,14 @@ export default function Contact() {
                                     </div>
                                 </Card>
 
-                                <Card variant="glass" hover={true}>
+                                <Card variant="glassDark" hover={true} className="border border-white/5">
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-lg gradient-mixed flex items-center justify-center flex-shrink-0">
+                                        <div className="w-12 h-12 rounded-lg bg-accent-600 flex items-center justify-center flex-shrink-0">
                                             <MapPin className="w-6 h-6 text-white" />
                                         </div>
                                         <div>
-                                            <h3 className="font-semibold text-slate-900 mb-1">Location</h3>
-                                            <p className="text-slate-600">
+                                            <h3 className="font-semibold text-white mb-1">Location</h3>
+                                            <p className="text-slate-400">
                                                 Plot No. 25, 1st Floor, Room 104<br />
                                                 Design House, Cairo Road<br />
                                                 Lusaka, Zambia
@@ -219,9 +219,9 @@ export default function Contact() {
                                 </Card>
 
                                 {/* Office Hours */}
-                                <Card variant="glassPrimary">
-                                    <h3 className="font-semibold text-slate-900 mb-3">Office Hours</h3>
-                                    <div className="space-y-2 text-sm text-slate-600">
+                                <Card variant="glassDark" className="border border-white/5">
+                                    <h3 className="font-semibold text-white mb-3">Office Hours</h3>
+                                    <div className="space-y-2 text-sm text-slate-400">
                                         <div className="flex justify-between">
                                             <span>Monday - Friday:</span>
                                             <span className="font-medium">8:00 AM - 5:00 PM</span>

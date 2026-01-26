@@ -8,12 +8,13 @@ export default function Card({
     ...props
 }) {
     const variants = {
-        default: 'bg-white border border-slate-200 shadow-md',
+        default: 'bg-slate-950/40 border border-white/5 shadow-2xl backdrop-blur-xl',
         glass: 'glass shadow-lg',
-        glassPrimary: 'glass-primary shadow-lg',
+        glassDark: 'glass-dark shadow-lg border border-white/5',
+        glassPrimary: 'glass-accent shadow-lg',
         glassAccent: 'glass-accent shadow-lg',
-        primary: 'bg-primary-50 border border-primary-200 shadow-md',
-        accent: 'bg-accent-50 border border-accent-200 shadow-md',
+        primary: 'bg-accent-500/10 border border-accent-500/20 shadow-md',
+        accent: 'bg-accent-500/10 border border-accent-500/20 shadow-md',
     };
 
     return (

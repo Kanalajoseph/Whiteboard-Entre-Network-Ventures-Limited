@@ -13,9 +13,9 @@ export default function PropertyCard({ property }) {
 
     return (
         <Link to={`/properties/${property.id}`}>
-            <Card variant="glass" hover={true} className="h-full overflow-hidden">
+            <Card variant="glassDark" hover={true} className="h-full overflow-hidden">
                 {/* Property Image */}
-                <div className="relative aspect-video bg-gradient-to-br from-primary-100 to-accent-100 overflow-hidden">
+                <div className="relative aspect-video bg-slate-800 overflow-hidden">
                     {property.mainImage ? (
                         <img
                             src={property.mainImage}
@@ -23,15 +23,15 @@ export default function PropertyCard({ property }) {
                             className="w-full h-full object-cover"
                         />
                     ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                            <Home className="w-24 h-24 text-primary-300" />
+                        <div className="w-full h-full flex items-center justify-center bg-slate-800">
+                            <Home className="w-24 h-24 text-slate-700" />
                         </div>
                     )}
 
                     {/* Transaction Type Badge */}
                     <div className="absolute top-3 left-3">
                         <span className={`px-3 py-1 rounded-full text-xs font-semibold shadow-lg ${property.transactionType === 'Sale'
-                            ? 'bg-primary-600 text-white'
+                            ? 'bg-accent-700 text-white'
                             : 'bg-accent-600 text-white'
                             }`}>
                             For {property.transactionType}
@@ -51,34 +51,33 @@ export default function PropertyCard({ property }) {
 
                 {/* Property Details */}
                 <div className="p-5">
-                    {/* Type & Location */}
-                    <div className="text-sm text-slate-600 mb-2">
+                    <div className="text-sm text-slate-300 mb-2">
                         {property.propertyType} • {property.district}
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
+                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
                         {property.title}
                     </h3>
 
                     {/* Features */}
                     {property.bedrooms && (
-                        <div className="flex items-center gap-4 mb-4 text-sm text-slate-600">
+                        <div className="flex items-center gap-4 mb-4 text-sm text-slate-300">
                             {property.bedrooms && (
                                 <div className="flex items-center gap-1">
-                                    <Bed className="w-4 h-4 text-primary-600" />
+                                    <Bed className="w-4 h-4 text-accent-400" />
                                     <span>{property.bedrooms} Beds</span>
                                 </div>
                             )}
                             {property.bathrooms && (
                                 <div className="flex items-center gap-1">
-                                    <Bath className="w-4 h-4 text-primary-600" />
+                                    <Bath className="w-4 h-4 text-accent-400" />
                                     <span>{property.bathrooms} Baths</span>
                                 </div>
                             )}
                             {property.areaSqm && (
                                 <div className="flex items-center gap-1">
-                                    <Maximize className="w-4 h-4 text-primary-600" />
+                                    <Maximize className="w-4 h-4 text-accent-400" />
                                     <span>{property.areaSqm}m²</span>
                                 </div>
                             )}
@@ -87,27 +86,27 @@ export default function PropertyCard({ property }) {
 
                     {/* Description */}
                     {property.description && (
-                        <p className="text-sm text-slate-600 mb-4 line-clamp-2">
+                        <p className="text-sm text-slate-300 mb-4 line-clamp-2">
                             {property.description}
                         </p>
                     )}
 
                     {/* Pricing */}
-                    <div className="border-t border-slate-200 pt-4">
+                    <div className="border-t border-white/10 pt-4">
                         <div className="flex items-baseline justify-between">
                             <div>
-                                <span className="text-2xl font-bold text-primary-600">
+                                <span className="text-2xl font-bold text-accent-400">
                                     {formatPrice(property.price)}
                                 </span>
                                 {property.transactionType === 'Rent' && (
-                                    <span className="text-sm text-slate-600 ml-1">/month</span>
+                                    <span className="text-sm text-slate-300 ml-1">/month</span>
                                 )}
                             </div>
                         </div>
                     </div>
 
                     {/* View Details Button */}
-                    <button className="w-full mt-4 py-2 rounded-lg bg-gradient-to-r from-primary-600 to-accent-600 text-white font-medium hover:opacity-90 transition-all">
+                    <button className="w-full mt-4 py-2 rounded-lg bg-accent-600 text-white font-medium hover:bg-accent-700 transition-all shadow-lg shadow-accent-600/20">
                         View Details
                     </button>
                 </div>

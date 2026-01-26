@@ -14,7 +14,7 @@ export default function ServiceDetail() {
         return (
             <PageTransition>
                 <div className="container-custom section text-center">
-                    <h1 className="text-4xl font-bold text-slate-900 mb-4">Service Not Found</h1>
+                    <h1 className="text-4xl font-bold text-white mb-4">Service Not Found</h1>
                     <Link to="/services">
                         <Button variant="primary">View All Services</Button>
                     </Link>
@@ -28,11 +28,11 @@ export default function ServiceDetail() {
     return (
         <PageTransition>
             {/* Breadcrumb */}
-            <div className="bg-slate-50 border-b border-slate-200 py-4">
+            <div className="bg-transparent border-b border-white/5 py-4">
                 <div className="container-custom">
                     <Link
                         to="/services"
-                        className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-600 transition-colors"
+                        className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-accent-400 transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
                         Back to Services
@@ -41,7 +41,7 @@ export default function ServiceDetail() {
             </div>
 
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
@@ -60,21 +60,21 @@ export default function ServiceDetail() {
             </section>
 
             {/* Features Section */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="max-w-5xl mx-auto">
                         <ScrollReveal>
-                            <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 text-center">
-                                What We <span className="gradient-text">Offer</span>
+                            <h2 className="text-4xl font-display font-bold text-white mb-8 text-center">
+                                What We <span className="text-accent-500">Offer</span>
                             </h2>
                         </ScrollReveal>
 
                         <div className="grid md:grid-cols-2 gap-4">
                             {service.features.map((feature, index) => (
                                 <ScrollReveal key={feature} delay={index * 0.05} direction="up">
-                                    <div className="flex items-start gap-3 p-4 rounded-lg hover:bg-primary-50 transition-colors">
-                                        <CheckCircle2 className="w-6 h-6 text-primary-600 flex-shrink-0 mt-0.5" />
-                                        <p className="text-slate-700 leading-relaxed">{feature}</p>
+                                    <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-800/30 border border-white/5 hover:bg-slate-800/50 transition-colors">
+                                        <CheckCircle2 className="w-6 h-6 text-accent-500 flex-shrink-0 mt-0.5" />
+                                        <p className="text-slate-300 leading-relaxed">{feature}</p>
                                     </div>
                                 </ScrollReveal>
                             ))}
@@ -84,22 +84,22 @@ export default function ServiceDetail() {
             </section>
 
             {/* Benefits Section */}
-            <section className="section bg-gradient-to-br from-slate-50 to-primary-50/30">
+            <section className="section bg-transparent border-t border-white/5">
                 <div className="container-custom">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 text-center">
-                            Why Choose <span className="gradient-text">Us</span>
+                        <h2 className="text-4xl font-display font-bold text-white mb-8 text-center">
+                            Why Choose <span className="text-accent-500">Us</span>
                         </h2>
                     </ScrollReveal>
 
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                         {service.benefits.map((benefit, index) => (
                             <ScrollReveal key={benefit} delay={index * 0.1} direction="up">
-                                <Card variant="glass" hover={true} className="text-center">
-                                    <div className="w-12 h-12 rounded-full gradient-mixed flex items-center justify-center mx-auto mb-3">
+                                <Card variant="glassDark" hover={true} className="text-center border border-white/5">
+                                    <div className="w-12 h-12 rounded-full bg-accent-600 flex items-center justify-center mx-auto mb-3">
                                         <CheckCircle2 className="w-6 h-6 text-white" />
                                     </div>
-                                    <p className="font-semibold text-slate-700">{benefit}</p>
+                                    <p className="font-semibold text-slate-200">{benefit}</p>
                                 </Card>
                             </ScrollReveal>
                         ))}
@@ -108,7 +108,7 @@ export default function ServiceDetail() {
             </section>
 
             {/* CTA Section */}
-            <section className="section bg-slate-900 text-white">
+            <section className="section bg-transparent border-t border-white/5 text-white">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center">

@@ -3,13 +3,13 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-white">
+    <footer className="border-t border-white/5 bg-transparent text-white">
       <div className="container-custom py-12">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg gradient-mixed flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-accent-600 flex items-center justify-center shadow-lg shadow-accent-600/20">
                 <span className="text-white font-bold">W</span>
               </div>
               <span className="font-display font-bold text-lg">WEN</span>
@@ -107,7 +107,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-white/5">
         <div className="container-custom py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <span>© {new Date().getFullYear()} Whiteboard Entre-Network Ventures Limited. All rights reserved.</span>
           <div className="flex items-center gap-4">

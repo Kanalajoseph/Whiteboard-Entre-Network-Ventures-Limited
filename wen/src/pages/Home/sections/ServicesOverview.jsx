@@ -4,14 +4,14 @@ import ScrollReveal from '../../../components/ScrollReveal';
 
 export default function ServicesOverview() {
     return (
-        <section className="section bg-white">
+        <section className="section bg-transparent">
             <div className="container-custom">
                 <ScrollReveal>
                     <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+                        <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
                             Our <span className="gradient-text">Services</span>
                         </h2>
-                        <p className="text-lg text-slate-600">
+                        <p className="text-lg text-slate-300">
                             Comprehensive solutions across multiple industries, delivered with expertise and commitment to excellence.
                         </p>
                     </div>

@@ -10,14 +10,14 @@ export default function Services() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-primary-50 via-slate-50 to-accent-50/30">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
-                            <h1 className="text-5xl md:text-6xl font-display font-bold text-slate-900 mb-6">
-                                Our <span className="gradient-text">Services</span>
+                            <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
+                                Our <span className="text-accent-500">Services</span>
                             </h1>
-                            <p className="text-xl text-slate-600 leading-relaxed mb-8">
+                            <p className="text-xl text-slate-300 leading-relaxed mb-8">
                                 Comprehensive multi-service solutions tailored to meet the unique needs of
                                 businesses, institutions, and individuals across various sectors.
                             </p>
@@ -27,7 +27,7 @@ export default function Services() {
             </section>
 
             {/* Services Grid */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                         {servicesData.map((service, index) => (
@@ -45,11 +45,11 @@ export default function Services() {
 
                     {/* CTA Section */}
                     <ScrollReveal>
-                        <div className="text-center max-w-2xl mx-auto glass-primary rounded-2xl p-8">
-                            <h2 className="text-3xl font-display font-bold text-slate-900 mb-4">
+                        <div className="text-center max-w-2xl mx-auto glass-dark rounded-2xl p-8 border border-white/5">
+                            <h2 className="text-3xl font-display font-bold text-white mb-4">
                                 Need a Custom Solution?
                             </h2>
-                            <p className="text-lg text-slate-600 mb-6">
+                            <p className="text-lg text-slate-300 mb-6">
                                 We tailor our services to meet your specific requirements. Get in touch to discuss your needs.
                             </p>
                             <Link to="/contact">

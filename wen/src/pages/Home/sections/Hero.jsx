@@ -102,15 +102,15 @@ export default function Hero() {
             </div>
 
             {/* Decorative gradient overlays */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.2),transparent_50%)]"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(251,146,60,0.2),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_40%,rgba(249,115,22,0.15),transparent_60%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_60%,rgba(59,130,246,0.15),transparent_60%)]"></div>
 
             {/* Content */}
             <div className="container-custom relative z-10">
                 <div className="max-w-4xl">
                     <ScrollReveal>
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-primary mb-6 animate-slideDown">
-                            <Sparkles className="w-4 h-4 text-primary-400" />
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-dark border border-white/5 mb-6 animate-slideDown shadow-2xl">
+                            <Sparkles className="w-4 h-4 text-accent-400" />
                             <span className="text-sm font-medium text-white">
                                 Multi-Service Solutions for Your Success
                             </span>
@@ -202,8 +202,9 @@ export default function Hero() {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute top-20 right-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute top-20 right-10 w-72 h-72 bg-accent-500/5 rounded-full blur-3xl animate-float"></div>
             <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60rem] h-[60rem] bg-primary-600/5 rounded-full blur-[140px] pointer-events-none"></div>
         </section>
     );
 }

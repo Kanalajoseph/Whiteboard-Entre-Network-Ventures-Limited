@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import wenLogo from "../images/wen_logo2.jpg";
 
 const linkBase =
-  "text-sm font-medium text-slate-700 hover:text-primary-600 transition-colors duration-200";
-const linkActive = "text-primary-600 font-semibold";
+  "text-sm font-medium text-slate-300 hover:text-white transition-colors duration-200";
+const linkActive = "text-accent-500 font-semibold";
 
 
 const services = [
@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 glass shadow-sm">
+    <header className="sticky top-0 z-50 border-b border-white/5 glass-dark shadow-sm">
       <div className="container-custom py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3" onClick={handleLogoClick}>
@@ -50,7 +50,7 @@ export default function Header() {
             className="h-12 w-auto object-contain cursor-pointer"
           />
           <div className="hidden md:block">
-            <span className="text-sm font-bold text-slate-900 leading-tight">
+            <span className="text-sm font-bold text-white leading-tight">
               Whiteboard Entre-Network<br />Ventures Limited
             </span>
           </div>
@@ -91,21 +91,21 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-0 mt-2 w-64 glass rounded-xl shadow-xl overflow-hidden"
+                  className="absolute top-full left-0 mt-2 w-64 glass-dark rounded-xl shadow-xl overflow-hidden border border-white/10"
                 >
                   <div className="py-2">
                     <NavLink
                       to="/services"
-                      className="block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                      className="block px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white transition-colors"
                     >
                       All Services
                     </NavLink>
-                    <div className="border-t border-slate-200 my-2"></div>
+                    <div className="border-t border-white/5 my-2"></div>
                     {services.map((service) => (
                       <NavLink
                         key={service.path}
                         to={service.path}
-                        className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        className="block px-4 py-2 text-sm text-slate-400 hover:bg-white/5 hover:text-white transition-colors"
                       >
                         {service.name}
                       </NavLink>
@@ -172,13 +172,13 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
+          className="lg:hidden p-2 rounded-lg hover:bg-white/5 transition-colors"
           aria-label="Toggle menu"
         >
           {mobileMenuOpen ? (
-            <X className="w-6 h-6 text-slate-900" />
+            <X className="w-6 h-6 text-white" />
           ) : (
-            <Menu className="w-6 h-6 text-slate-900" />
+            <Menu className="w-6 h-6 text-white" />
           )}
         </button>
       </div>
@@ -191,7 +191,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-slate-200 glass-primary overflow-hidden"
+            className="lg:hidden border-t border-white/5 glass-dark overflow-hidden"
           >
             <nav className="container-custom py-4 flex flex-col gap-2 max-h-[70vh] overflow-y-auto">
               <NavLink
@@ -199,7 +199,7 @@ export default function Header() {
                 end
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Home
@@ -209,7 +209,7 @@ export default function Header() {
                 to="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 About
@@ -224,7 +224,7 @@ export default function Header() {
                   key={service.path}
                   to={service.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="px-6 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600 rounded-lg transition-colors"
+                  className="px-6 py-2 text-sm text-slate-400 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
                 >
                   {service.name}
                 </NavLink>
@@ -234,7 +234,7 @@ export default function Header() {
                 to="/team"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Team
@@ -244,7 +244,7 @@ export default function Header() {
                 to="/clients"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Clients
@@ -254,7 +254,7 @@ export default function Header() {
                 to="/cars"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Cars
@@ -264,7 +264,7 @@ export default function Header() {
                 to="/properties"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Properties
@@ -274,7 +274,7 @@ export default function Header() {
                 to="/loans"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Loans
@@ -284,7 +284,7 @@ export default function Header() {
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-primary-100 text-primary-600 font-semibold' : 'text-slate-700 hover:bg-primary-50'} transition-colors`
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
                 }
               >
                 Contact

@@ -46,12 +46,12 @@ export default function Properties() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-                                Real <span className="text-accent-100">Estate</span>
+                                Real <span className="text-accent-500">Estate</span>
                             </h1>
                             <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Discover your dream property in Lusaka. From residential homes to commercial spaces, find the perfect match.
@@ -66,7 +66,7 @@ export default function Properties() {
                                         placeholder="Search properties..."
                                         value={filters.search}
                                         onChange={(e) => handleFilterChange('search', e.target.value)}
-                                        className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                                        className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500 focus:bg-white/10 transition-all"
                                     />
                                 </div>
                             </div>
@@ -76,14 +76,14 @@ export default function Properties() {
             </section>
 
             {/* Properties Listing */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="flex items-center justify-between mb-8">
                         <div>
-                            <h2 className="text-2xl font-bold text-slate-900">
+                            <h2 className="text-2xl font-bold text-white">
                                 Available Properties
                             </h2>
-                            <p className="text-slate-600 mt-1">
+                            <p className="text-slate-400 mt-1">
                                 {filteredProperties.length} {filteredProperties.length === 1 ? 'property' : 'properties'} available
                             </p>
                         </div>
@@ -91,7 +91,7 @@ export default function Properties() {
                         {/* Filter Toggle Button */}
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors"
                         >
                             <SlidersHorizontal className="w-5 h-5" />
                             Filters
@@ -101,17 +101,17 @@ export default function Properties() {
                     {/* Filters Panel */}
                     {showFilters && (
                         <ScrollReveal>
-                            <div className="glass rounded-xl p-6 mb-8">
+                            <div className="glass-dark rounded-xl p-6 mb-8 border border-white/10">
                                 <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
                                     {/* Property Type */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Property Type
                                         </label>
                                         <select
                                             value={filters.propertyType}
                                             onChange={(e) => handleFilterChange('propertyType', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">All Types</option>
                                             <option value="House">House</option>
@@ -124,13 +124,13 @@ export default function Properties() {
 
                                     {/* Transaction Type */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Transaction
                                         </label>
                                         <select
                                             value={filters.transactionType}
                                             onChange={(e) => handleFilterChange('transactionType', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">All</option>
                                             <option value="Sale">For Sale</option>
@@ -140,7 +140,7 @@ export default function Properties() {
 
                                     {/* Min Price */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Min Price
                                         </label>
                                         <input
@@ -148,13 +148,13 @@ export default function Properties() {
                                             value={filters.minPrice}
                                             onChange={(e) => handleFilterChange('minPrice', e.target.value)}
                                             placeholder="0"
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         />
                                     </div>
 
                                     {/* Max Price */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Max Price
                                         </label>
                                         <input
@@ -162,19 +162,19 @@ export default function Properties() {
                                             value={filters.maxPrice}
                                             onChange={(e) => handleFilterChange('maxPrice', e.target.value)}
                                             placeholder="5000000"
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         />
                                     </div>
 
                                     {/* Bedrooms */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Min Bedrooms
                                         </label>
                                         <select
                                             value={filters.bedrooms}
                                             onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">Any</option>
                                             <option value="1">1+</option>
@@ -186,13 +186,13 @@ export default function Properties() {
 
                                     {/* District */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             District
                                         </label>
                                         <select
                                             value={filters.district}
                                             onChange={(e) => handleFilterChange('district', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">All Areas</option>
                                             <option value="Kabulonga">Kabulonga</option>
@@ -208,7 +208,7 @@ export default function Properties() {
                                 <div className="flex justify-end mt-4">
                                     <button
                                         onClick={clearFilters}
-                                        className="text-sm text-primary-600 hover:text-primary-700 font-medium"
+                                        className="text-sm text-accent-400 hover:text-accent-300 font-medium"
                                     >
                                         Clear all filters
                                     </button>
@@ -228,7 +228,7 @@ export default function Properties() {
                         </div>
                     ) : (
                         <div className="text-center py-16">
-                            <p className="text-lg text-slate-600">
+                            <p className="text-lg text-slate-300">
                                 No properties found matching your criteria. Try adjusting your filters.
                             </p>
                         </div>
@@ -237,7 +237,7 @@ export default function Properties() {
             </section>
 
             {/* CTA Section */}
-            <section className="section bg-slate-900 text-white">
+            <section className="section bg-transparent text-white border-t border-white/5">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center">

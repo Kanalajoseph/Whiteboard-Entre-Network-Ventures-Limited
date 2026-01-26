@@ -37,7 +37,7 @@
 }
 
 body {
-  @apply font-sans text-slate-900 bg-slate-50;
+  @apply font-sans text-slate-100 bg-slate-900;
   font-feature-settings: 'rlig' 1, 'calt' 1;
 }
 
@@ -54,11 +54,11 @@ h6 {
 
 /* Glassmorphism Effects */
 .glass {
-  @apply bg-white/80 backdrop-blur-lg border border-white/20;
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
 }
 
 .glass-dark {
-  @apply bg-slate-900/80 backdrop-blur-lg border border-white/10;
+  @apply bg-slate-950/40 backdrop-blur-xl border border-white/5 shadow-2xl;
 }
 
 .glass-primary {
@@ -79,11 +79,15 @@ h6 {
 }
 
 .gradient-mixed {
-  @apply bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900;
+  @apply bg-gradient-to-br from-primary-950 via-slate-950 to-accent-950;
+}
+
+.gradient-sync {
+  @apply bg-gradient-to-r from-primary-600 to-accent-600;
 }
 
 .gradient-text {
-  @apply bg-gradient-to-br from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-400 to-accent-600;
 }
 
 /* Shadow Utilities */
@@ -269,7 +273,7 @@ h6 {
 
 /* Focus Visible */
 *:focus-visible {
-  @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+  @apply outline-none ring-2 ring-accent-500 ring-offset-2 ring-offset-slate-900;
 }
 
 /* Smooth Scroll */
@@ -288,13 +292,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-slate-100;
+  @apply bg-slate-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-500 rounded-full;
+  @apply bg-accent-600 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary-600;
+  @apply bg-accent-500;
 }

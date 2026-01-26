@@ -25,10 +25,10 @@ export default function CarDetails() {
     if (!car) {
         return (
             <PageTransition>
-                <div className="min-h-screen flex items-center justify-center">
+                <div className="min-h-screen flex items-center justify-center bg-transparent">
                     <div className="text-center">
-                        <h1 className="text-3xl font-bold text-slate-900 mb-4">Car Not Found</h1>
-                        <Link to="/cars" className="text-primary-600 hover:text-primary-700">
+                        <h1 className="text-3xl font-bold text-white mb-4">Car Not Found</h1>
+                        <Link to="/cars" className="text-accent-400 hover:text-accent-500">
                             ← Back to Cars
                         </Link>
                     </div>
@@ -68,16 +68,16 @@ export default function CarDetails() {
     return (
         <PageTransition>
             {/* Header */}
-            <section className="section-sm bg-gradient-to-br from-primary-50 to-slate-50">
+            <section className="section-sm bg-transparent border-b border-white/5">
                 <div className="container-custom">
-                    <Link to="/cars" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 mb-4">
+                    <Link to="/cars" className="inline-flex items-center gap-2 text-accent-400 hover:text-accent-500 mb-4 transition-colors">
                         <ArrowLeft className="w-5 h-5" />
                         Back to Cars
                     </Link>
                 </div>
             </section>
 
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
@@ -85,16 +85,16 @@ export default function CarDetails() {
                             {/* Car Title */}
                             <ScrollReveal>
                                 <div>
-                                    <h1 className="text-4xl font-display font-bold text-slate-900 mb-2">
+                                    <h1 className="text-4xl font-display font-bold text-white mb-2">
                                         {car.year} {car.make} {car.model}
                                     </h1>
-                                    <p className="text-xl text-slate-600">{car.color} • {car.transmission}</p>
+                                    <p className="text-xl text-slate-400">{car.color} • {car.transmission}</p>
                                 </div>
                             </ScrollReveal>
 
                             {/* Image */}
                             <ScrollReveal>
-                                <div className="aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl overflow-hidden shadow-2xl">
+                                <div className="aspect-video bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                                     {car.mainImage ? (
                                         <img
                                             src={car.mainImage}
@@ -103,7 +103,7 @@ export default function CarDetails() {
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center">
-                                            <span className="text-6xl text-primary-300">🚗</span>
+                                            <span className="text-6xl text-accent-400">🚗</span>
                                         </div>
                                     )}
                                 </div>
@@ -111,32 +111,32 @@ export default function CarDetails() {
 
                             {/* Specifications */}
                             <ScrollReveal>
-                                <Card variant="glass">
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Specifications</h2>
+                                <Card variant="glassDark" className="border border-white/5">
+                                    <h2 className="text-2xl font-bold text-white mb-4">Specifications</h2>
                                     <div className="grid md:grid-cols-2 gap-4">
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Year</span>
-                                            <span className="font-semibold text-slate-900">{car.year}</span>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Year</span>
+                                            <span className="font-semibold text-white">{car.year}</span>
                                         </div>
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Transmission</span>
-                                            <span className="font-semibold text-slate-900">{car.transmission}</span>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Transmission</span>
+                                            <span className="font-semibold text-white">{car.transmission}</span>
                                         </div>
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Fuel Type</span>
-                                            <span className="font-semibold text-slate-900">{car.fuelType}</span>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Fuel Type</span>
+                                            <span className="font-semibold text-white">{car.fuelType}</span>
                                         </div>
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Seats</span>
-                                            <span className="font-semibold text-slate-900">{car.seats}</span>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Seats</span>
+                                            <span className="font-semibold text-white">{car.seats}</span>
                                         </div>
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Color</span>
-                                            <span className="font-semibold text-slate-900">{car.color}</span>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Color</span>
+                                            <span className="font-semibold text-white">{car.color}</span>
                                         </div>
-                                        <div className="flex justify-between py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Status</span>
-                                            <span className={`font-semibold ${car.availability === 'Available' ? 'text-green-600' : 'text-red-600'}`}>
+                                        <div className="flex justify-between py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Status</span>
+                                            <span className={`font-semibold ${car.availability === 'Available' ? 'text-green-400' : 'text-red-400'}`}>
                                                 {car.availability}
                                             </span>
                                         </div>
@@ -147,13 +147,13 @@ export default function CarDetails() {
                             {/* Features */}
                             {car.features && car.features.length > 0 && (
                                 <ScrollReveal>
-                                    <Card variant="glass">
-                                        <h2 className="text-2xl font-bold text-slate-900 mb-4">Features</h2>
+                                    <Card variant="glassDark" className="border border-white/5">
+                                        <h2 className="text-2xl font-bold text-white mb-4">Features</h2>
                                         <div className="grid md:grid-cols-2 gap-3">
                                             {car.features.map((feature, index) => (
                                                 <div key={index} className="flex items-center gap-2">
-                                                    <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                                    <span className="text-slate-700">{feature}</span>
+                                                    <Check className="w-5 h-5 text-accent-500 flex-shrink-0" />
+                                                    <span className="text-slate-300">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -164,9 +164,9 @@ export default function CarDetails() {
                             {/* Description */}
                             {car.description && (
                                 <ScrollReveal>
-                                    <Card variant="glass">
-                                        <h2 className="text-2xl font-bold text-slate-900 mb-4">About This Car</h2>
-                                        <p className="text-slate-600 leading-relaxed">{car.description}</p>
+                                    <Card variant="glassDark" className="border border-white/5">
+                                        <h2 className="text-2xl font-bold text-white mb-4">About This Car</h2>
+                                        <p className="text-slate-300 leading-relaxed">{car.description}</p>
                                     </Card>
                                 </ScrollReveal>
                             )}
@@ -176,27 +176,27 @@ export default function CarDetails() {
                         <div className="space-y-6">
                             {/* Pricing Card */}
                             <ScrollReveal>
-                                <Card variant="glassPrimary" className="sticky top-24">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Pricing</h3>
+                                <Card variant="glassDark" className="sticky top-24 border border-white/10">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Pricing</h3>
                                     <div className="space-y-4">
-                                        <div className="flex justify-between items-center py-3 border-b border-slate-200">
-                                            <span className="text-slate-600">Daily Rate</span>
-                                            <span className="text-2xl font-bold text-primary-600">
+                                        <div className="flex justify-between items-center py-3 border-b border-white/5">
+                                            <span className="text-slate-400">Daily Rate</span>
+                                            <span className="text-2xl font-bold text-accent-400">
                                                 {formatPrice(car.dailyRate)}
                                             </span>
                                         </div>
                                         {car.weeklyRate && (
-                                            <div className="flex justify-between items-center py-3 border-b border-slate-200">
-                                                <span className="text-slate-600">Weekly Rate</span>
-                                                <span className="text-xl font-semibold text-slate-900">
+                                            <div className="flex justify-between items-center py-3 border-b border-white/5">
+                                                <span className="text-slate-400">Weekly Rate</span>
+                                                <span className="text-xl font-semibold text-white">
                                                     {formatPrice(car.weeklyRate)}
                                                 </span>
                                             </div>
                                         )}
                                         {car.monthlyRate && (
                                             <div className="flex justify-between items-center py-3">
-                                                <span className="text-slate-600">Monthly Rate</span>
-                                                <span className="text-xl font-semibold text-slate-900">
+                                                <span className="text-slate-400">Monthly Rate</span>
+                                                <span className="text-xl font-semibold text-white">
                                                     {formatPrice(car.monthlyRate)}
                                                 </span>
                                             </div>
@@ -205,8 +205,8 @@ export default function CarDetails() {
 
                                     {/* Enquiry Form */}
                                     <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-                                        <h4 className="font-semibold text-slate-900 flex items-center gap-2">
-                                            <MessageSquare className="w-5 h-5 text-primary-600" />
+                                        <h4 className="font-semibold text-white flex items-center gap-2">
+                                            <MessageSquare className="w-5 h-5 text-accent-500" />
                                             Send Enquiry
                                         </h4>
 
@@ -237,14 +237,14 @@ export default function CarDetails() {
                                         />
 
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                            <label className="block text-sm font-medium text-slate-300 mb-2">
                                                 Rental Period
                                             </label>
                                             <select
                                                 name="rentalPeriod"
                                                 value={formData.rentalPeriod}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all"
                                             >
                                                 <option value="daily">Daily</option>
                                                 <option value="weekly">Weekly</option>
@@ -272,14 +272,14 @@ export default function CarDetails() {
                                     </form>
 
                                     {/* Contact Info */}
-                                    <div className="mt-6 pt-6 border-t border-slate-200">
-                                        <p className="text-sm text-slate-600 mb-3">Or contact us directly:</p>
+                                    <div className="mt-6 pt-6 border-t border-white/10">
+                                        <p className="text-sm text-slate-400 mb-3">Or contact us directly:</p>
                                         <div className="space-y-2 text-sm">
-                                            <a href="tel:+260973414769" className="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+                                            <a href="tel:+260973414769" className="flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
                                                 <Phone className="w-4 h-4" />
                                                 +260 973 414 769
                                             </a>
-                                            <a href="mailto:whiteboardzambia@gmail.com" className="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+                                            <a href="mailto:whiteboardzambia@gmail.com" className="flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
                                                 <Mail className="w-4 h-4" />
                                                 whiteboardzambia@gmail.com
                                             </a>

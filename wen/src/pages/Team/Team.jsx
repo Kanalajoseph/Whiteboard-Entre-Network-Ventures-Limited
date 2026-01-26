@@ -52,12 +52,12 @@ export default function Team() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-                                Meet Our <span className="text-accent-100">Team</span>
+                                Meet Our <span className="text-accent-500">Team</span>
                             </h1>
                             <p className="text-xl text-white/90 leading-relaxed">
                                 Experienced professionals dedicated to delivering excellence across all our service areas.
@@ -68,10 +68,10 @@ export default function Team() {
             </section>
 
             {/* Board of Directors */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 text-center">
+                        <h2 className="text-4xl font-display font-bold text-white mb-8 text-center">
                             Board of Directors
                         </h2>
                     </ScrollReveal>
@@ -86,10 +86,10 @@ export default function Team() {
             </section>
 
             {/* CEO */}
-            <section className="section bg-gradient-to-br from-slate-50 to-primary-50/20">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 text-center">
+                        <h2 className="text-4xl font-display font-bold text-white mb-8 text-center">
                             Executive Leadership
                         </h2>
                     </ScrollReveal>
@@ -104,10 +104,10 @@ export default function Team() {
             </section>
 
             {/* Directors */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
-                        <h2 className="text-4xl font-display font-bold text-slate-900 mb-8 text-center">
+                        <h2 className="text-4xl font-display font-bold text-white mb-8 text-center">
                             Department Directors
                         </h2>
                     </ScrollReveal>
@@ -122,7 +122,7 @@ export default function Team() {
             </section>
 
             {/* Note Section */}
-            <section className="section bg-slate-900 text-white">
+            <section className="section bg-transparent border-t border-white/5 text-white">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-2xl mx-auto text-center">

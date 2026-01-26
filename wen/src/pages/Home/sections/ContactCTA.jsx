@@ -5,11 +5,7 @@ import ScrollReveal from '../../../components/ScrollReveal';
 
 export default function ContactCTA() {
     return (
-        <section className="section-lg bg-slate-900 text-white relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f46e580_1px,transparent_1px),linear-gradient(to_bottom,#4f46e580_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-            </div>
+        <section className="section-lg bg-transparent text-white relative overflow-hidden">
 
             <div className="container-custom relative z-10">
                 <ScrollReveal>
@@ -52,7 +48,7 @@ export default function ContactCTA() {
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <div className="text-left">
-                                    <div className="text-sm text-slate-400">Call us at</div>
+                                    <div className="text-sm text-slate-300">Call us at</div>
                                     <div className="font-semibold">+260 973 414 769</div>
                                 </div>
                             </a>
@@ -65,7 +61,7 @@ export default function ContactCTA() {
                                     <Mail className="w-5 h-5" />
                                 </div>
                                 <div className="text-left">
-                                    <div className="text-sm text-slate-400">Email us at</div>
+                                    <div className="text-sm text-slate-300">Email us at</div>
                                     <div className="font-semibold">whiteboard289@gmail.com</div>
                                 </div>
                             </a>
@@ -74,9 +70,6 @@ export default function ContactCTA() {
                 </ScrollReveal>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -top-10 -right-10 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"></div>
         </section>
     );
 }

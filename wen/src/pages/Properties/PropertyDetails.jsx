@@ -25,10 +25,10 @@ export default function PropertyDetails() {
     if (!property) {
         return (
             <PageTransition>
-                <div className="min-h-screen flex items-center justify-center">
+                <div className="min-h-screen flex items-center justify-center bg-transparent">
                     <div className="text-center">
-                        <h1 className="text-3xl font-bold text-slate-900 mb-4">Property Not Found</h1>
-                        <Link to="/properties" className="text-primary-600 hover:text-primary-700">
+                        <h1 className="text-3xl font-bold text-white mb-4">Property Not Found</h1>
+                        <Link to="/properties" className="text-accent-400 hover:text-accent-500">
                             ← Back to Properties
                         </Link>
                     </div>
@@ -67,16 +67,16 @@ export default function PropertyDetails() {
     return (
         <PageTransition>
             {/* Header */}
-            <section className="section-sm bg-gradient-to-br from-primary-50 to-slate-50">
+            <section className="section-sm bg-transparent border-b border-white/5">
                 <div className="container-custom">
-                    <Link to="/properties" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 mb-4">
+                    <Link to="/properties" className="inline-flex items-center gap-2 text-accent-400 hover:text-accent-500 mb-4 transition-colors">
                         <ArrowLeft className="w-5 h-5" />
                         Back to Properties
                     </Link>
                 </div>
             </section>
 
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-3 gap-8">
                         {/* Main Content */}
@@ -86,23 +86,23 @@ export default function PropertyDetails() {
                                 <div>
                                     <div className="flex items-center gap-3 mb-2">
                                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${property.transactionType === 'Sale'
-                                                ? 'bg-primary-100 text-primary-700'
-                                                : 'bg-accent-100 text-accent-700'
+                                            ? 'bg-accent-600/20 text-accent-400'
+                                            : 'bg-accent-500/20 text-accent-300'
                                             }`}>
                                             For {property.transactionType}
                                         </span>
                                         <span className={`px-3 py-1 rounded-full text-sm font-semibold ${property.status === 'Available'
-                                                ? 'bg-green-100 text-green-700'
-                                                : 'bg-red-100 text-red-700'
+                                            ? 'bg-green-100 text-green-700'
+                                            : 'bg-red-100 text-red-700'
                                             }`}>
                                             {property.status}
                                         </span>
                                     </div>
-                                    <h1 className="text-4xl font-display font-bold text-slate-900 mb-2">
+                                    <h1 className="text-4xl font-display font-bold text-white mb-2">
                                         {property.title}
                                     </h1>
-                                    <p className="text-xl text-slate-600 flex items-center gap-2">
-                                        <MapPin className="w-5 h-5" />
+                                    <p className="text-xl text-slate-400 flex items-center gap-2">
+                                        <MapPin className="w-5 h-5 text-accent-500" />
                                         {property.address}, {property.district}
                                     </p>
                                 </div>
@@ -110,7 +110,7 @@ export default function PropertyDetails() {
 
                             {/* Image */}
                             <ScrollReveal>
-                                <div className="aspect-video bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl overflow-hidden shadow-2xl">
+                                <div className="aspect-video bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-white/5">
                                     {property.mainImage ? (
                                         <img
                                             src={property.mainImage}
@@ -127,49 +127,49 @@ export default function PropertyDetails() {
 
                             {/* Quick Facts */}
                             <ScrollReveal>
-                                <Card variant="glass">
-                                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Property Details</h2>
+                                <Card variant="glassDark" className="border border-white/5">
+                                    <h2 className="text-2xl font-bold text-white mb-4">Property Details</h2>
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                                                <Bed className="w-6 h-6 text-primary-600" />
+                                            <div className="w-12 h-12 rounded-lg bg-accent-600/10 flex items-center justify-center">
+                                                <Bed className="w-6 h-6 text-accent-400" />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-slate-600">Bedrooms</p>
-                                                <p className="text-lg font-semibold text-slate-900">
+                                                <p className="text-sm text-slate-400">Bedrooms</p>
+                                                <p className="text-lg font-semibold text-white">
                                                     {property.bedrooms || 'N/A'}
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                                                <Bath className="w-6 h-6 text-primary-600" />
+                                            <div className="w-12 h-12 rounded-lg bg-accent-600/10 flex items-center justify-center">
+                                                <Bath className="w-6 h-6 text-accent-400" />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-slate-600">Bathrooms</p>
-                                                <p className="text-lg font-semibold text-slate-900">
+                                                <p className="text-sm text-slate-400">Bathrooms</p>
+                                                <p className="text-lg font-semibold text-white">
                                                     {property.bathrooms || 'N/A'}
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                                                <Maximize className="w-6 h-6 text-primary-600" />
+                                            <div className="w-12 h-12 rounded-lg bg-accent-600/10 flex items-center justify-center">
+                                                <Maximize className="w-6 h-6 text-accent-400" />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-slate-600">Area</p>
-                                                <p className="text-lg font-semibold text-slate-900">
+                                                <p className="text-sm text-slate-400">Area</p>
+                                                <p className="text-lg font-semibold text-white">
                                                     {property.areaSqm ? `${property.areaSqm} m²` : 'N/A'}
                                                 </p>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 rounded-lg bg-primary-100 flex items-center justify-center">
-                                                <MapPin className="w-6 h-6 text-primary-600" />
+                                            <div className="w-12 h-12 rounded-lg bg-accent-600/10 flex items-center justify-center">
+                                                <MapPin className="w-6 h-6 text-accent-400" />
                                             </div>
                                             <div>
-                                                <p className="text-sm text-slate-600">Type</p>
-                                                <p className="text-lg font-semibold text-slate-900">
+                                                <p className="text-sm text-slate-400">Type</p>
+                                                <p className="text-lg font-semibold text-white">
                                                     {property.propertyType}
                                                 </p>
                                             </div>
@@ -181,13 +181,13 @@ export default function PropertyDetails() {
                             {/* Features */}
                             {property.features && property.features.length > 0 && (
                                 <ScrollReveal>
-                                    <Card variant="glass">
-                                        <h2 className="text-2xl font-bold text-slate-900 mb-4">Features & Amenities</h2>
+                                    <Card variant="glassDark" className="border border-white/5">
+                                        <h2 className="text-2xl font-bold text-white mb-4">Features & Amenities</h2>
                                         <div className="grid md:grid-cols-2 gap-3">
                                             {property.features.map((feature, index) => (
                                                 <div key={index} className="flex items-center gap-2">
-                                                    <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                                                    <span className="text-slate-700">{feature}</span>
+                                                    <Check className="w-5 h-5 text-accent-500 flex-shrink-0" />
+                                                    <span className="text-slate-300">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -198,9 +198,9 @@ export default function PropertyDetails() {
                             {/* Description */}
                             {property.description && (
                                 <ScrollReveal>
-                                    <Card variant="glass">
-                                        <h2 className="text-2xl font-bold text-slate-900 mb-4">About This Property</h2>
-                                        <p className="text-slate-600 leading-relaxed">{property.description}</p>
+                                    <Card variant="glassDark" className="border border-white/5">
+                                        <h2 className="text-2xl font-bold text-white mb-4">About This Property</h2>
+                                        <p className="text-slate-300 leading-relaxed">{property.description}</p>
                                     </Card>
                                 </ScrollReveal>
                             )}
@@ -210,21 +210,21 @@ export default function PropertyDetails() {
                         <div className="space-y-6">
                             {/* Pricing Card */}
                             <ScrollReveal>
-                                <Card variant="glassPrimary" className="sticky top-24">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Price</h3>
+                                <Card variant="glassDark" className="sticky top-24 border border-white/10 shadow-accent-500/5">
+                                    <h3 className="text-2xl font-bold text-white mb-4">Price</h3>
                                     <div className="mb-6">
-                                        <span className="text-3xl font-bold text-primary-600">
+                                        <span className="text-3xl font-bold text-accent-400">
                                             {formatPrice(property.price)}
                                         </span>
                                         {property.transactionType === 'Rent' && (
-                                            <span className="text-lg text-slate-600 ml-2">/month</span>
+                                            <span className="text-lg text-slate-400 ml-2">/month</span>
                                         )}
                                     </div>
 
                                     {/* Enquiry Form */}
                                     <form onSubmit={handleSubmit} className="space-y-4">
-                                        <h4 className="font-semibold text-slate-900 flex items-center gap-2">
-                                            <MessageSquare className="w-5 h-5 text-primary-600" />
+                                        <h4 className="font-semibold text-white flex items-center gap-2">
+                                            <MessageSquare className="w-5 h-5 text-accent-500" />
                                             Send Enquiry
                                         </h4>
 
@@ -255,14 +255,14 @@ export default function PropertyDetails() {
                                         />
 
                                         <div>
-                                            <label className="block text-sm font-medium text-slate-700 mb-2">
+                                            <label className="block text-sm font-medium text-slate-300 mb-2">
                                                 Interested In
                                             </label>
                                             <select
                                                 name="interestedIn"
                                                 value={formData.interestedIn}
                                                 onChange={handleInputChange}
-                                                className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500 transition-all"
                                             >
                                                 <option value="Sale">Buying</option>
                                                 <option value="Rent">Renting</option>
@@ -290,14 +290,14 @@ export default function PropertyDetails() {
                                     </form>
 
                                     {/* Contact Info */}
-                                    <div className="mt-6 pt-6 border-t border-slate-200">
-                                        <p className="text-sm text-slate-600 mb-3">Or contact us directly:</p>
+                                    <div className="mt-6 pt-6 border-t border-white/10">
+                                        <p className="text-sm text-slate-400 mb-3">Or contact us directly:</p>
                                         <div className="space-y-2 text-sm">
-                                            <a href="tel:+260973414769" className="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+                                            <a href="tel:+260973414769" className="flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
                                                 <Phone className="w-4 h-4" />
                                                 +260 973 414 769
                                             </a>
-                                            <a href="mailto:whiteboardzambia@gmail.com" className="flex items-center gap-2 text-primary-600 hover:text-primary-700">
+                                            <a href="mailto:whiteboardzambia@gmail.com" className="flex items-center gap-2 text-accent-400 hover:text-accent-300 transition-colors">
                                                 <Mail className="w-4 h-4" />
                                                 whiteboardzambia@gmail.com
                                             </a>

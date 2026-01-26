@@ -127,43 +127,43 @@ export default function Loans() {
         // Confirmation Screen
         return (
             <PageTransition>
-                <section className="section min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-accent-50/30">
+                <section className="section min-h-screen flex items-center justify-center bg-transparent">
                     <div className="container-custom">
                         <ScrollReveal>
-                            <Card variant="glass" className="max-w-2xl mx-auto text-center">
-                                <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-                                    <Check className="w-12 h-12 text-green-600" />
+                            <Card variant="glassDark" className="max-w-2xl mx-auto text-center border border-white/5">
+                                <div className="w-20 h-20 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center mx-auto mb-6">
+                                    <Check className="w-12 h-12 text-green-400" />
                                 </div>
 
-                                <h1 className="text-3xl font-bold text-slate-900 mb-4">
+                                <h1 className="text-3xl font-bold text-white mb-4">
                                     Application Submitted Successfully!
                                 </h1>
 
-                                <p className="text-lg text-slate-600 mb-6">
+                                <p className="text-lg text-slate-300 mb-6">
                                     Thank you for applying for a loan with WEN. Your application has been received and is under review.
                                 </p>
 
-                                <div className="bg-primary-50 rounded-xl p-6 mb-6">
-                                    <p className="text-sm text-slate-600 mb-2">Your Application Reference Number:</p>
-                                    <p className="text-2xl font-bold text-primary-600">{applicationReference}</p>
-                                    <p className="text-sm text-slate-600 mt-2">
+                                <div className="bg-accent-500/10 border border-accent-500/20 rounded-xl p-6 mb-6">
+                                    <p className="text-sm text-slate-400 mb-2">Your Application Reference Number:</p>
+                                    <p className="text-2xl font-bold text-accent-400">{applicationReference}</p>
+                                    <p className="text-sm text-slate-400 mt-2">
                                         Please save this number for tracking your application
                                     </p>
                                 </div>
 
-                                <div className="text-left bg-slate-50 rounded-xl p-6 mb-6">
-                                    <h3 className="font-semibold text-slate-900 mb-3">What Happens Next?</h3>
-                                    <ol className="space-y-2 text-slate-600">
+                                <div className="text-left bg-slate-800/50 border border-white/5 rounded-xl p-6 mb-6">
+                                    <h3 className="font-semibold text-white mb-3">What Happens Next?</h3>
+                                    <ol className="space-y-2 text-slate-400">
                                         <li className="flex gap-2">
-                                            <span className="font-semibold">1.</span>
+                                            <span className="font-semibold text-accent-400">1.</span>
                                             <span>We will review your application within 2-3 business days</span>
                                         </li>
                                         <li className="flex gap-2">
-                                            <span className="font-semibold">2.</span>
+                                            <span className="font-semibold text-accent-400">2.</span>
                                             <span>Our team will contact you for verification and additional documents</span>
                                         </li>
                                         <li className="flex gap-2">
-                                            <span className="font-semibold">3.</span>
+                                            <span className="font-semibold text-accent-400">3.</span>
                                             <span>Upon approval, we will discuss terms and finalize the loan agreement</span>
                                         </li>
                                     </ol>
@@ -188,12 +188,12 @@ export default function Loans() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-                                Loan <span className="text-accent-100">Application</span>
+                                Loan <span className="text-accent-500">Application</span>
                             </h1>
                             <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Apply for a collateral-based loan and get financing for your personal or business needs.
@@ -204,7 +204,7 @@ export default function Loans() {
             </section>
 
             {/* Application Form */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="max-w-4xl mx-auto">
                         {/* Progress Steps */}
@@ -212,9 +212,9 @@ export default function Loans() {
                             <div className="mb-12">
                                 <div className="flex justify-between items-center relative">
                                     {/* Progress Line */}
-                                    <div className="absolute top-5 left-0 right-0 h-1 bg-slate-200 -z-10">
+                                    <div className="absolute top-5 left-0 right-0 h-1 bg-slate-800 -z-10">
                                         <div
-                                            className="h-full bg-gradient-to-r from-primary-600 to-accent-600 transition-all duration-500"
+                                            className="h-full bg-accent-600 transition-all duration-500 shadow-lg shadow-accent-600/20"
                                             style={{ width: `${((currentStep - 1) / (steps.length - 1)) * 100}%` }}
                                         />
                                     </div>
@@ -227,10 +227,10 @@ export default function Loans() {
                                         return (
                                             <div key={step.number} className="flex flex-col items-center">
                                                 <div className={`w-12 h-12 rounded-full flex items-center justify-center mb-2 transition-all ${isCompleted
-                                                    ? 'bg-gradient-to-r from-primary-600 to-accent-600 text-white'
+                                                    ? 'bg-accent-600 text-white'
                                                     : isActive
-                                                        ? 'bg-white border-4 border-primary-600 text-primary-600'
-                                                        : 'bg-white border-2 border-slate-300 text-slate-400'
+                                                        ? 'bg-slate-800 border-4 border-accent-500 text-white'
+                                                        : 'bg-slate-800 border-2 border-slate-700 text-slate-500'
                                                     }`}>
                                                     {isCompleted ? (
                                                         <Check className="w-6 h-6" />
@@ -238,7 +238,7 @@ export default function Loans() {
                                                         <Icon className="w-6 h-6" />
                                                     )}
                                                 </div>
-                                                <p className={`text-sm font-medium ${isActive || isCompleted ? 'text-primary-600' : 'text-slate-500'
+                                                <p className={`text-sm font-medium ${isActive || isCompleted ? 'text-accent-400' : 'text-slate-500'
                                                     }`}>
                                                     {step.title}
                                                 </p>
@@ -251,12 +251,12 @@ export default function Loans() {
 
                         {/* Form Steps */}
                         <ScrollReveal>
-                            <Card variant="glass">
+                            <Card variant="glassDark" className="border border-white/5">
                                 <form onSubmit={handleSubmit}>
                                     {/* Step 1: Personal Information */}
                                     {currentStep === 1 && (
                                         <div className="space-y-6">
-                                            <h2 className="text-2xl font-bold text-slate-900 mb-6">Personal Information</h2>
+                                            <h2 className="text-2xl font-bold text-white mb-6">Personal Information</h2>
 
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 <FormInput
@@ -324,7 +324,7 @@ export default function Loans() {
                                     {/* Step 2: Loan Details */}
                                     {currentStep === 2 && (
                                         <div className="space-y-6">
-                                            <h2 className="text-2xl font-bold text-slate-900 mb-6">Loan Details</h2>
+                                            <h2 className="text-2xl font-bold text-white mb-6">Loan Details</h2>
 
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 <FormInput
@@ -338,14 +338,14 @@ export default function Loans() {
                                                 />
 
                                                 <div>
-                                                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                                                    <label className="block text-sm font-medium text-slate-300 mb-2">
                                                         Loan Type
                                                     </label>
                                                     <select
                                                         name="loanType"
                                                         value={formData.loanType}
                                                         onChange={handleInputChange}
-                                                        className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                        className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                                         required
                                                     >
                                                         <option value="Personal">Personal Loan</option>
@@ -357,14 +357,14 @@ export default function Loans() {
                                             </div>
 
                                             <div>
-                                                <label className="block text-sm font-medium text-slate-700 mb-2">
+                                                <label className="block text-sm font-medium text-slate-300 mb-2">
                                                     Repayment Period
                                                 </label>
                                                 <select
                                                     name="repaymentPeriod"
                                                     value={formData.repaymentPeriod}
                                                     onChange={handleInputChange}
-                                                    className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                    className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                                     required
                                                 >
                                                     <option value="6">6 months</option>
@@ -391,24 +391,24 @@ export default function Loans() {
                                     {/* Step 3: Collateral & Employment */}
                                     {currentStep === 3 && (
                                         <div className="space-y-6">
-                                            <h2 className="text-2xl font-bold text-slate-900 mb-6">Collateral & Employment Information</h2>
+                                            <h2 className="text-2xl font-bold text-white mb-6">Collateral & Employment Information</h2>
 
-                                            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-                                                <p className="text-sm text-blue-800">
+                                            <div className="bg-accent-500/10 border border-accent-500/20 rounded-lg p-4 mb-6">
+                                                <p className="text-sm text-accent-300">
                                                     <strong>Note:</strong> All loans require collateral. The collateral value should be equal to or greater than the loan amount.
                                                 </p>
                                             </div>
 
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 <div>
-                                                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                                                    <label className="block text-sm font-medium text-slate-300 mb-2">
                                                         Collateral Type
                                                     </label>
                                                     <select
                                                         name="collateralType"
                                                         value={formData.collateralType}
                                                         onChange={handleInputChange}
-                                                        className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                        className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                                         required
                                                     >
                                                         <option value="">Select collateral type</option>
@@ -442,14 +442,14 @@ export default function Loans() {
 
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 <div>
-                                                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                                                    <label className="block text-sm font-medium text-slate-300 mb-2">
                                                         Employment Status
                                                     </label>
                                                     <select
                                                         name="employmentStatus"
                                                         value={formData.employmentStatus}
                                                         onChange={handleInputChange}
-                                                        className="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                                        className="w-full px-4 py-2.5 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                                         required
                                                     >
                                                         <option value="Employed">Employed</option>
@@ -492,7 +492,7 @@ export default function Loans() {
                                     )}
 
                                     {/* Navigation Buttons */}
-                                    <div className="flex justify-between mt-8 pt-6 border-t border-slate-200">
+                                    <div className="flex justify-between mt-8 pt-6 border-t border-white/10">
                                         {currentStep > 1 && (
                                             <Button
                                                 type="button"
@@ -533,7 +533,7 @@ export default function Loans() {
             </section>
 
             {/* Info Section */}
-            <section className="section bg-slate-900 text-white">
+            <section className="section bg-transparent border-t border-white/5 text-white">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto">

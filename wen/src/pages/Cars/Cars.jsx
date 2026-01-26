@@ -44,12 +44,12 @@ export default function Cars() {
     return (
         <PageTransition>
             {/* Hero Section */}
-            <section className="section-lg bg-gradient-to-br from-slate-900 via-slate-800 to-primary-900">
+            <section className="section-lg bg-transparent">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-4xl mx-auto text-center">
                             <h1 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">
-                                Car <span className="text-accent-100">Hire</span>
+                                Car <span className="text-accent-500">Hire</span>
                             </h1>
                             <p className="text-xl text-white/90 leading-relaxed mb-8">
                                 Find the perfect vehicle for your journey. From economy to luxury, we have options for every need.
@@ -64,7 +64,7 @@ export default function Cars() {
                                         placeholder="Search by make, model, or color..."
                                         value={filters.search}
                                         onChange={(e) => handleFilterChange('search', e.target.value)}
-                                        className="w-full pl-12 pr-4 py-4 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
+                                        className="w-full pl-12 pr-4 py-4 rounded-xl bg-slate-800 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-accent-500"
                                     />
                                 </div>
                             </div>
@@ -74,14 +74,14 @@ export default function Cars() {
             </section>
 
             {/* Cars Listing */}
-            <section className="section bg-white">
+            <section className="section bg-transparent">
                 <div className="container-custom">
                     <div className="flex items-center justify-between mb-8">
                         <div>
-                            <h2 className="text-2xl font-bold text-slate-900">
+                            <h2 className="text-2xl font-bold text-white">
                                 Available Vehicles
                             </h2>
-                            <p className="text-slate-600 mt-1">
+                            <p className="text-slate-400 mt-1">
                                 {filteredCars.length} {filteredCars.length === 1 ? 'car' : 'cars'} available
                             </p>
                         </div>
@@ -89,7 +89,7 @@ export default function Cars() {
                         {/* Filter Toggle Button */}
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors"
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/10 bg-slate-800 text-white hover:bg-slate-700 transition-colors"
                         >
                             <SlidersHorizontal className="w-5 h-5" />
                             Filters
@@ -99,17 +99,17 @@ export default function Cars() {
                     {/* Filters Panel */}
                     {showFilters && (
                         <ScrollReveal>
-                            <div className="glass rounded-xl p-6 mb-8">
+                            <div className="glass-dark rounded-xl p-6 mb-8 border border-white/5">
                                 <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
                                     {/* Transmission */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Transmission
                                         </label>
                                         <select
                                             value={filters.transmission}
                                             onChange={(e) => handleFilterChange('transmission', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">All</option>
                                             <option value="Automatic">Automatic</option>
@@ -119,13 +119,13 @@ export default function Cars() {
 
                                     {/* Fuel Type */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Fuel Type
                                         </label>
                                         <select
                                             value={filters.fuelType}
                                             onChange={(e) => handleFilterChange('fuelType', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">All</option>
                                             <option value="Petrol">Petrol</option>
@@ -137,7 +137,7 @@ export default function Cars() {
 
                                     {/* Min Price */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Min Price (Daily)
                                         </label>
                                         <input
@@ -145,13 +145,13 @@ export default function Cars() {
                                             value={filters.minPrice}
                                             onChange={(e) => handleFilterChange('minPrice', e.target.value)}
                                             placeholder="0"
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         />
                                     </div>
 
                                     {/* Max Price */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Max Price (Daily)
                                         </label>
                                         <input
@@ -159,19 +159,19 @@ export default function Cars() {
                                             value={filters.maxPrice}
                                             onChange={(e) => handleFilterChange('maxPrice', e.target.value)}
                                             placeholder="1000"
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         />
                                     </div>
 
                                     {/* Seats */}
                                     <div>
-                                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        <label className="block text-sm font-medium text-slate-300 mb-2">
                                             Min Seats
                                         </label>
                                         <select
                                             value={filters.seats}
                                             onChange={(e) => handleFilterChange('seats', e.target.value)}
-                                            className="w-full px-3 py-2 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                                            className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent-500"
                                         >
                                             <option value="">Any</option>
                                             <option value="5">5+</option>
@@ -183,7 +183,7 @@ export default function Cars() {
                                 <div className="flex justify-end mt-4">
                                     <button
                                         onClick={clearFilters}
-                                        className="text-sm text-primary-600 hover:text-primary-700 font-medium"
+                                        className="text-sm text-accent-400 hover:text-accent-300 font-medium"
                                     >
                                         Clear all filters
                                     </button>
@@ -203,7 +203,7 @@ export default function Cars() {
                         </div>
                     ) : (
                         <div className="text-center py-16">
-                            <p className="text-lg text-slate-600">
+                            <p className="text-lg text-slate-300">
                                 No cars found matching your criteria. Try adjusting your filters.
                             </p>
                         </div>
@@ -212,7 +212,7 @@ export default function Cars() {
             </section>
 
             {/* CTA Section */}
-            <section className="section bg-slate-900 text-white">
+            <section className="section bg-transparent border-t border-white/5 text-white">
                 <div className="container-custom">
                     <ScrollReveal>
                         <div className="max-w-3xl mx-auto text-center">

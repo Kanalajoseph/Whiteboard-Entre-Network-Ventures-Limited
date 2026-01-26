@@ -12,29 +12,29 @@ export default function ServiceCard({
     return (
         <Link to={link} className="block">
             <Card
-                variant="glass"
+                variant="glassDark"
                 hover={true}
                 className="h-full group"
             >
                 <div className={clsx(
-                    'w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110',
-                    gradient ? 'gradient-mixed' : 'bg-primary-100'
+                    'w-14 h-14 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 shadow-lg',
+                    gradient ? 'bg-accent-600' : 'bg-accent-500/10 border border-accent-500/20'
                 )}>
                     <Icon className={clsx(
                         'w-7 h-7',
-                        gradient ? 'text-white' : 'text-primary-600'
+                        gradient ? 'text-white' : 'text-accent-400'
                     )} />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:gradient-text transition-all">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:gradient-text transition-all">
                     {title}
                 </h3>
 
-                <p className="text-slate-600 mb-4 line-clamp-3">
+                <p className="text-slate-300 mb-4 line-clamp-3">
                     {description}
                 </p>
 
-                <div className="flex items-center gap-2 text-primary-600 font-medium group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-accent-400 font-medium group-hover:gap-3 transition-all">
                     Learn more
                     <ArrowRight className="w-4 h-4" />
                 </div>
