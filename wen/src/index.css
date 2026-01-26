@@ -281,9 +281,21 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Selection */
-::selection {
-  @apply bg-accent-500 text-white;
+/* 3D Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
 
 /* Scrollbar */

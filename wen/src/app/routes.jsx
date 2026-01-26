@@ -14,6 +14,13 @@ import CarDetails from "../pages/Cars/CarDetails";
 import Properties from "../pages/Properties/Properties";
 import PropertyDetails from "../pages/Properties/PropertyDetails";
 import Loans from "../pages/Loans/Loans";
+import AcademyHome from "../pages/Academy/AcademyHome";
+import QuestionBank from "../pages/Academy/QuestionBank";
+import PastPapers from "../pages/Academy/PastPapers";
+import MockExams from "../pages/Academy/MockExams";
+import Flashcards from "../pages/Academy/Flashcards";
+import KeyConcepts from "../pages/Academy/KeyConcepts";
+import AcademyManagement from "../pages/Admin/Academy/AcademyManagement";
 
 // Admin
 import AdminLogin from "../pages/Admin/AdminLogin";
@@ -37,6 +44,13 @@ export const router = createBrowserRouter([
       { path: "properties", element: <Properties /> },
       { path: "properties/:id", element: <PropertyDetails /> },
       { path: "loans", element: <Loans /> },
+      { path: "academy", element: <AcademyHome /> },
+      { path: "academy/questions", element: <QuestionBank /> },
+      { path: "academy/papers", element: <PastPapers /> },
+      { path: "academy/exams", element: <MockExams /> },
+      { path: "academy/flashcards", element: <Flashcards /> },
+      { path: "academy/concepts", element: <KeyConcepts /> },
+      { path: "academy/solutions", element: <div className="text-center py-16"><h2 className="text-2xl font-bold">Worked Solutions - Coming Soon</h2></div> },
     ],
   },
   {
@@ -56,6 +70,7 @@ export const router = createBrowserRouter([
           { path: "cars", element: <div className="text-center py-16"><h2 className="text-2xl font-bold">Cars Management - Coming Soon</h2></div> },
           { path: "properties", element: <div className="text-center py-16"><h2 className="text-2xl font-bold">Properties Management - Coming Soon</h2></div> },
           { path: "loans", element: <div className="text-center py-16"><h2 className="text-2xl font-bold">Loan Applications - Coming Soon</h2></div> },
+          { path: "academy", element: <AcademyManagement /> },
           { path: "enquiries", element: <div className="text-center py-16"><h2 className="text-2xl font-bold">Enquiries - Coming Soon</h2></div> },
         ],
       },

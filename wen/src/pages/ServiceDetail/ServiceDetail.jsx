@@ -119,16 +119,29 @@ export default function ServiceDetail() {
                                 Contact us today to discuss how we can help with your {service.title.toLowerCase()} needs.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Link to="/contact">
-                                    <Button
-                                        variant="accent"
-                                        size="lg"
-                                        icon={ArrowRight}
-                                        iconPosition="right"
-                                    >
-                                        Request a Quote
-                                    </Button>
-                                </Link>
+                                {service.id === 'education' ? (
+                                    <Link to="/academy">
+                                        <Button
+                                            variant="accent"
+                                            size="lg"
+                                            icon={ArrowRight}
+                                            iconPosition="right"
+                                        >
+                                            Visit WEN Academy
+                                        </Button>
+                                    </Link>
+                                ) : (
+                                    <Link to="/contact">
+                                        <Button
+                                            variant="accent"
+                                            size="lg"
+                                            icon={ArrowRight}
+                                            iconPosition="right"
+                                        >
+                                            Request a Quote
+                                        </Button>
+                                    </Link>
+                                )}
                                 <Link to="/services">
                                     <Button variant="white" size="lg">
                                         View All Services

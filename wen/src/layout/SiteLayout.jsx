@@ -1,9 +1,13 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import WENTutor from "../components/academy/WENTutor";
 
 export default function SiteLayout() {
+  const location = useLocation();
+  const isAcademyRoute = location.pathname.startsWith('/academy');
+
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -26,6 +30,7 @@ export default function SiteLayout() {
       </main>
       <Footer />
       <WhatsAppButton />
+      {isAcademyRoute && <WENTutor />}
     </div>
   );
 }

@@ -76,6 +76,11 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link className="text-slate-400 font-bold text-accent-400 transition-colors" to="/academy">
+                  WEN Academy
+                </Link>
+              </li>
             </ul>
           </div>
 

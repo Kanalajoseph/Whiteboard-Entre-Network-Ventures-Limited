@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Car, Home, DollarSign, MessageSquare, LogOut } from 'lucide-react';
+import { LayoutDashboard, Car, Home, DollarSign, MessageSquare, GraduationCap, LogOut } from 'lucide-react';
 import { useAdminAuth } from '../../contexts/AdminAuthContext';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,7 @@ export default function AdminSidebar() {
 
     const menuItems = [
         { icon: LayoutDashboard, label: 'Dashboard', path: '/admin/dashboard' },
+        { icon: GraduationCap, label: 'WEN Academy', path: '/admin/academy' },
         { icon: Car, label: 'Cars', path: '/admin/cars' },
         { icon: Home, label: 'Properties', path: '/admin/properties' },
         { icon: DollarSign, label: 'Loan Applications', path: '/admin/loans' },

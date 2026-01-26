@@ -152,6 +152,13 @@ export default function Header() {
           </NavLink>
 
           <NavLink
+            to="/academy"
+            className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
+          >
+            Academy
+          </NavLink>
+
+          <NavLink
             to="/contact"
             className={({ isActive }) => `${linkBase} ${isActive ? linkActive : ""}`}
           >
@@ -278,6 +285,16 @@ export default function Header() {
                 }
               >
                 Loans
+              </NavLink>
+
+              <NavLink
+                to="/academy"
+                onClick={() => setMobileMenuOpen(false)}
+                className={({ isActive }) =>
+                  `px-4 py-2.5 rounded-lg ${isActive ? 'bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/20' : 'text-slate-300 hover:bg-white/5'} transition-colors`
+                }
+              >
+                Academy
               </NavLink>
 
               <NavLink
